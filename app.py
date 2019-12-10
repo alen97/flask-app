@@ -16,7 +16,7 @@ app = Flask(__name__)
 @app.route("/", methods=['GET'])
 @app.route("/home", methods=['GET'])
 def main():
-    my_response = Response(response="Web Server Personal", status=200, mimetype="text/plain")
+    my_response = Response(response="hola flask", status=200, mimetype="text/plain")
     my_response.headers["Content-Type"] = "text/plain; charset=utf-8"
     return my_response
 
@@ -24,7 +24,7 @@ def main():
 @app.route("/about", methods=['GET'])
 def get_about():
 
-    my_response = Response(response="ÉSTA ES MI PRIMER WEB APP CON FLASK", status=200, mimetype="text/plain")
+    my_response = Response(response="hola mundo con flask", status=200, mimetype="text/plain")
     my_response.headers["Content-Type"] = "text/plain; charset=utf-8"
 
     return my_response
